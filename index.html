@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17152d"><title>The Anshika Experience</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{--bg:#17152d;--panel:#24213f;--pink:#ff8fb8;--mint:#9ff3d2;--cream:#fff3df;--muted:#bdb4d6;--line:#51496f;--yellow:#ffe28a}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 12%,#40315d 0,transparent 28%),radial-gradient(circle at 90% 80%,#3b2850 0,transparent 25%),var(--bg);color:var(--cream);font-family:Nunito,system-ui,sans-serif}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}.wrap{width:min(760px,100%);margin:auto;padding:22px 16px 55px}.top{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.1em}.pixel{font-family:'Press Start 2P',monospace;line-height:1.8}.brand{color:var(--pink);font-size:9px}.status{border:1px solid var(--line);border-radius:99px;padding:8px 11px}.hero{text-align:center;padding:46px 10px 30px}.mascot{font-size:54px;animation:bob 2.4s ease-in-out infinite;display:inline-block}@keyframes bob{50%{transform:translateY(-8px)}}.kicker{font-size:9px;color:var(--mint);margin:18px 0}h1{font-size:clamp(22px,5vw,34px);margin:12px 0}h1 span{color:var(--pink)}.lead{max-width:500px;margin:14px auto 22px;color:var(--muted);line-height:1.7}.subtext{color:var(--muted);font-size:13px;line-height:1.6}.pixel-btn{border:0;background:var(--pink);color:#291b37;padding:15px 20px;border-radius:8px;font-weight:1000;box-shadow:0 5px 0 #a94c78}.pixel-btn:active{transform:translateY(4px);box-shadow:0 1px 0 #a94c78}.secondary{background:var(--mint);box-shadow:0 5px 0 #4e9d88}.hidden{display:none!important}.panel{background:linear-gradient(145deg,#282443,#211e39);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 12px 35px #09081766}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 13px}.section-head h2{font-size:10px;color:var(--pink);margin:0}.progress-shell{height:10px;background:#131226;border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:12px 0 6px}.progress{height:100%;width:0;background:linear-gradient(90deg,#ff5f9e,var(--yellow));transition:width .3s}.progress-text{font-size:12px;color:var(--muted);font-weight:900}.missions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mission{position:relative;text-align:left;min-height:145px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px;color:var(--cream)}.mission:hover{border-color:var(--pink);transform:translateY(-2px)}.mission .num{font:9px 'Press Start 2P';color:var(--mint)}.mission .emoji{display:block;font-size:27px;margin:11px 0 7px}.mission strong{display:block;font-size:14px}.mission small{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.4}.done{position:absolute;right:12px;top:12px;color:var(--mint);font-size:18px}.locked{opacity:.6}#missionView{margin-top:22px}.back{background:none;border:0;color:var(--mint);font-weight:900;padding:0;margin-bottom:18px}.mission-title{font:10px/1.9 'Press Start 2P';color:var(--pink);margin:0 0 14px}.question{font-size:18px;font-weight:900;line-height:1.4;margin:16px 0}.answers{display:grid;gap:9px;margin:18px 0}.answer{width:100%;text-align:left;background:#312c50;border:1px solid var(--line);color:var(--cream);border-radius:10px;padding:13px;font-weight:800}.answer:hover{border-color:var(--pink);background:#3b3159}.feedback{margin:14px 0;padding:14px;border-radius:10px;background:#1d3b39;color:var(--mint);font-weight:800;line-height:1.5}.achievement{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.ach{background:#302b52;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}.ach b{display:block;font-size:27px;margin-bottom:8px}.ach strong{font-size:12px;display:block}.ach small{display:block;color:var(--muted);margin-top:5px;font-size:11px}.final{text-align:center;padding:24px 12px}.final .trophy{font-size:52px}.final h2{font:11px/1.9 'Press Start 2P';color:var(--yellow)}.final p{color:var(--muted);line-height:1.8}.footer{text-align:center;color:#82799f;font-size:11px;margin-top:28px}.field{width:100%;background:var(--bg);color:var(--cream);border:1px solid var(--line);border-radius:10px;padding:14px;font:inherit;margin:10px 0}
+@media(max-width:430px){.missions{gap:9px}.mission{padding:12px;min-height:140px}.hero{padding-top:35px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Extra cute polish */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;z-index:0;background-image:radial-gradient(#ffb5d0 1.5px,transparent 1.5px),radial-gradient(#ffe28a 1px,transparent 1px);background-size:47px 47px,73px 73px;background-position:0 0,20px 25px}
+.wrap{position:relative;z-index:1}
+.mission{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.mission:hover{box-shadow:0 9px 24px #ff8fb822}
+.pixel-btn,.answer{transition:transform .15s ease,filter .15s ease}
+.pixel-btn:hover,.answer:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.heart-pop{position:fixed;z-index:20;pointer-events:none;font-size:20px;animation:heartFloat 1.1s ease-out forwards}
+@keyframes heartFloat{0%{opacity:0;transform:translateY(8px) scale(.6)}20%{opacity:1}100%{opacity:0;transform:translateY(-65px) scale(1.3)}}
+.popup-backdrop{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:#100d25d9;backdrop-filter:blur(7px)}
+.popup-card{width:min(390px,100%);text-align:center;padding:28px 22px 24px;border-radius:22px;border:2px solid #ffacd0;background:linear-gradient(145deg,#fff1f7,#ffe3ef);color:#49243a;box-shadow:0 18px 60px #08061599;animation:popupIn .35s cubic-bezier(.2,1.4,.4,1)}
+@keyframes popupIn{from{opacity:0;transform:translateY(22px) scale(.82)}to{opacity:1;transform:translateY(0) scale(1)}}
+.popup-sparkle{font-size:34px;margin-bottom:12px}
+.popup-word{font-size:clamp(23px,6vw,32px);font-weight:1000;line-height:1.25;margin:12px 0 8px;color:#b34478}
+.popup-count{font:8px/1.8 'Press Start 2P';color:#96617c;margin:10px 0 20px}
+.popup-card .pixel-btn{width:100%;background:#ff8fb8;box-shadow:0 5px 0 #bd5b85}
+.popup-card .close-popup{display:block;margin:16px auto 0;border:0;background:none;color:#96617c;font-size:12px;font-weight:800}
+@media(prefers-reduced-motion:reduce){.popup-card{animation:none}.heart-pop{display:none}}
+
+
+/* Midnight countdown gate */
+.countdown-gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at 50% 25%,#40315d 0,transparent 40%),var(--bg);text-align:center}
+.countdown-card{width:min(620px,100%);padding:30px 20px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#282443,#211e39);box-shadow:0 16px 45px #09081788}
+.countdown-heart{font-size:46px;animation:bob 2.4s ease-in-out infinite}
+.countdown-heading{font:clamp(11px,2.5vw,15px)/1.9 'Press Start 2P',monospace;color:var(--pink);margin:18px 0}
+.countdown-digits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:25px 0}
+.countdown-unit{padding:15px 7px;background:#17152d;border:1px solid var(--line);border-radius:12px}
+.countdown-unit strong{display:block;font:clamp(18px,5vw,30px) 'Press Start 2P',monospace;color:var(--mint)}
+.countdown-unit span{display:block;color:var(--muted);font-size:10px;font-weight:900;margin-top:12px;letter-spacing:.08em}
+.countdown-note{color:var(--muted);line-height:1.7}
+@media(max-width:400px){.countdown-digits{gap:5px}.countdown-unit{padding:12px 3px}.countdown-unit span{font-size:8px}}
+</style></head><body>
+<section id="countdownGate" class="countdown-gate" aria-live="polite">
+  <div class="countdown-card">
+    <div class="countdown-heart">💗 ✦ 💗</div>
+    <div class="kicker pixel">A LITTLE SURPRISE IS WAITING</div>
+    <h1 class="countdown-heading">THE ANSHIKA<br>EXPERIENCE</h1>
+    <p id="countdownMessage" class="countdown-note">Something special unlocks at midnight, November 4.</p>
+    <div id="countdownDigits" class="countdown-digits">
+      <div class="countdown-unit"><strong id="countDays">00</strong><span>DAYS</span></div>
+      <div class="countdown-unit"><strong id="countHours">00</strong><span>HOURS</span></div>
+      <div class="countdown-unit"><strong id="countMinutes">00</strong><span>MINUTES</span></div>
+      <div class="countdown-unit"><strong id="countSeconds">00</strong><span>SECONDS</span></div>
+    </div>
+    <button id="countdownEnter" class="pixel-btn hidden" onclick="openExperience()">ENTER MY UNIVERSE ▶</button>
+  </div>
+</section>
+<div id="mainSite" class="wrap hidden">
+<div class="top"><div class="brand pixel">DAY 04 / SPECIAL BUILD</div><div class="status">PLAYER: ANSHIKA</div></div>
+<section id="welcome"><div class="hero"><div class="mascot">૮ ˶ᵔ ᵕ ᵔ˶ ა</div><div class="kicker pixel">A VERY IMPORTANT GAME</div><h1>WELCOME TO THE<br><span>ANSHIKA EXPERIENCE</span></h1><p class="lead">This website has been created for one very specific person. Unfortunately, she's extremely difficult to impress.</p><button class="pixel-btn" onclick="enterGame()">ENTER MY UNIVERSE&nbsp; ▶</button><p class="subtext" style="margin-top:18px">No downloads. No high scores. Just a few missions made for u.</p></div></section>
+<main id="game" class="hidden">
+<div class="panel"><div class="section-head" style="margin-top:0"><h2 class="pixel">YOUR PROGRESS</h2><span class="progress-text" id="progressText">0 / 4 LEVELS</span></div><div class="progress-shell"><div class="progress" id="progressBar"></div></div><div class="progress-text" id="progressHint">Complete the four missions to reveal the secret level.</div></div>
+<div class="section-head"><h2 class="pixel">SELECT A MISSION</h2><span class="progress-text">★ PLAYER 01</span></div>
+<div class="missions" id="missionGrid">
+<button class="mission" onclick="openMission('main')"><span class="num">01</span><span class="emoji">🪞</span><strong>Main Character Test</strong><small>Find out what kind of main character u are.</small></button>
+<button class="mission" onclick="openMission('memory')"><span class="num">02</span><span class="emoji">🔎</span><strong>Memory Detective</strong><small>Let's see what u remember about us.</small></button>
+<button class="mission" onclick="openMission('power')"><span class="num">03</span><span class="emoji">✨</span><strong>Choose Your Superpower</strong><small>Pick the power u'd keep forever.</small></button>
+<button class="mission" onclick="openMission('compliment')"><span class="num">04</span><span class="emoji">💌</span><strong>Compliment Generator</strong><small>Press the button. Take the compliment.</small></button>
+<button class="mission locked hidden" id="secretCard" onclick="openMission('secret')"><span class="num">??</span><span class="emoji">🔐</span><strong>The Secret Level</strong><small>Something is waiting here for u.</small></button>
+</div><section id="missionView" class="panel hidden" aria-live="polite"></section><section id="achievementScreen" class="panel hidden" aria-live="polite"></section>
+</main><div class="footer">BUILT FOR ONE PLAYER ONLY <span style="color:var(--yellow)">✦</span></div></div>
+
+<div id="complimentPopup" class="popup-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="popupWord">
+  <div class="popup-card">
+    <div class="popup-sparkle">💗 ✨ 💗</div>
+    <div class="popup-count" id="popupCount">COMPLIMENT 1 / 5</div>
+    <div class="popup-word" id="popupWord">Beautiful.</div>
+    <p style="font-size:13px;color:#8c6078;line-height:1.6;margin:10px 0 20px">Just a little reminder from this tiny corner of the internet.</p>
+    <button class="pixel-btn" id="popupNext" onclick="nextCompliment()">NEXT COMPLIMENT ✦</button>
+    <button class="close-popup" onclick="closeComplimentPopup()">I'll come back to these ♡</button>
+  </div>
+</div>
+
+<script>
+const completed=new Set();
+// November 4, 2026 at 12:00 AM India Standard Time (UTC+05:30).
+const unlockAt = new Date("2026-11-04T00:00:00+05:30").getTime();
+function updateCountdown(){
+  const remaining=Math.max(0,unlockAt-Date.now());
+  const days=Math.floor(remaining/86400000);
+  const hours=Math.floor((remaining%86400000)/3600000);
+  const minutes=Math.floor((remaining%3600000)/60000);
+  const seconds=Math.floor((remaining%60000)/1000);
+  countDays.textContent=String(days).padStart(2,"0");
+  countHours.textContent=String(hours).padStart(2,"0");
+  countMinutes.textContent=String(minutes).padStart(2,"0");
+  countSeconds.textContent=String(seconds).padStart(2,"0");
+  if(remaining===0){
+    countdownMessage.textContent="It's midnight. Your little universe is ready. ♡";
+    countdownDigits.classList.add("hidden");
+    countdownEnter.classList.remove("hidden");
+  }
+}
+function openExperience(){countdownGate.classList.add("hidden");mainSite.classList.remove("hidden");}
+updateCountdown();
+setInterval(updateCountdown,1000);
+const memoryAnswers=[
+{q:"How many times have we sat together in the bus?",opts:["27 times","52 times","100 times"],a:1,why:"52 bus rides. Ordinary journeys became memories."},
+{q:"How many times have we held hands?",opts:["43 times","80 times","117 times"],a:2,why:"117 times. Still not nearly enough."},
+{q:"How many kisses did the Day 3 report count?",opts:["28","52","367"],a:0,why:"28 kisses. The report says there should be more."},
+{q:"How many times did our eyes meet?",opts:["43","80","117"],a:1,why:"80 times. Some moments didn't need words."}];
+const compliments=["Beautiful.","Drop dead Gorgeous.","Cute.","Hott.","Eye catching."];
+let memoryIndex=0,memoryScore=0,mainStep=0,complimentIndex=-1;
+function enterGame(){welcome.classList.add("hidden");game.classList.remove("hidden");window.scrollTo(0,0);updateProgress()}
+function updateProgress(){let n=completed.size;progressText.textContent=n+" / 4 LEVELS";progressBar.style.width=(n/4*100)+"%";progressHint.textContent=n===4?"All missions complete. The secret level is now unlocked.":"Complete the four missions to reveal the secret level.";document.querySelectorAll(".mission").forEach(card=>{let id=card.getAttribute("onclick")?.match(/'([^']+)'/)?.[1];if(id&&completed.has(id)&&id!=="secret"&&!card.querySelector(".done")){let m=document.createElement("span");m.className="done";m.textContent="✓";card.appendChild(m)}});if(n===4){secretCard.classList.remove("hidden","locked");if(achievementScreen.classList.contains("hidden"))showAchievements()}}
+function openMission(id){if(id==="secret"&&completed.size<4)return;achievementScreen.classList.add("hidden");missionView.classList.remove("hidden");if(id==="main")renderMain();if(id==="memory"){memoryIndex=0;memoryScore=0;renderMemory()}if(id==="power")renderPower();if(id==="compliment")renderCompliment();if(id==="secret")renderSecret();missionView.scrollIntoView({behavior:"smooth",block:"start"})}
+function closeMission(){missionView.classList.add("hidden");missionView.innerHTML="";missionGrid.scrollIntoView({behavior:"smooth",block:"start"})}
+function finish(id,msg){completed.add(id);updateProgress();missionView.innerHTML=`<div class="feedback">${msg}</div><button class="pixel-btn secondary" onclick="closeMission()">BACK TO MISSIONS ✓</button>`}
+function renderMain(){let qs=[{q:"When u enter a room, what's your natural setting?",o:["Quietly observing everything","Accidentally becoming the plot","Looking good. Obviously."]},{q:"Your most powerful weapon?",o:["That one look","Your laugh","Being impossible to forget"]},{q:"Choose your perfect day.",o:["Food, naps and peace","A little adventure","Doing absolutely nothing, dramatically"]}];if(mainStep>=qs.length){finish("main","MAIN CHARACTER CONFIRMED. Your official classification: impossible to ignore. ✦");return}let q=qs[mainStep];missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">01 / MAIN CHARACTER TEST</h2><div class="progress-text">QUESTION ${mainStep+1} OF 3</div><p class="question">${q.q}</p><div class="answers">${q.o.map(x=>`<button class="answer" onclick="mainStep++;renderMain()">${x}</button>`).join("")}</div><p class="subtext">There are no wrong answers. We checked. (There might be.)</p>`}
+function renderMemory(){if(memoryIndex>=memoryAnswers.length){let extra=memoryScore===4?"Perfect detective work. U remember the details.":memoryScore>=2?"Not bad, detective. The memories are still yours.":"Looks like we need a little revision of our own history.";finish("memory",`CASE CLOSED: ${memoryScore} / 4 correct. ${extra}`);return}let q=memoryAnswers[memoryIndex];missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">02 / MEMORY DETECTIVE</h2><div class="progress-text">CLUE ${memoryIndex+1} OF 4</div><p class="question">${q.q}</p><div class="answers">${q.opts.map((x,i)=>`<button class="answer" onclick="answerMemory(${i})">${x}</button>`).join("")}</div><p class="subtext">A tiny test of your very important memory.</p>`}
+function answerMemory(i){let q=memoryAnswers[memoryIndex],correct=i===q.a;if(correct)memoryScore++;missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">02 / MEMORY DETECTIVE</h2><div class="feedback">${correct?"CORRECT! ✦":"NOT QUITE —"} ${q.why}</div><button class="pixel-btn secondary" onclick="memoryIndex++;renderMemory()">NEXT CLUE →</button>`}
+function renderPower(){missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">03 / PICK YOUR FAVOURITE</h2><p class="question">U can choose just ONE. Which little moment would u keep forever?</p><div class="answers"><button class="answer" onclick="choosePower('Unlimited cuddles')">🧸 Unlimited cuddles</button><button class="answer" onclick="choosePower('Cheek kiss')">😘 Cheek kiss</button><button class="answer" onclick="choosePower('Lip kiss')">💋 Lip kiss</button><button class="answer" onclick="choosePower('Hands holding')">🤝 Hands holding</button></div><p class="subtext">Choose carefully, Anshika. This answer is going straight into the highly unofficial database.</p>`}
+function choosePower(p){finish("power",`SUPERPOWER SAVED: ${p}. Excellent choice, Anshika. The universe has been notified.`)}
+function renderCompliment(){
+ complimentIndex=-1;
+ missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">04 / COMPLIMENT GENERATOR</h2><div class="final"><div class="trophy">💌</div><p class="question">A tiny compliment delivery service, just for u.</p><p class="subtext">Five little reminders. Delivered one by one. No skipping allowed. (Okay, u can close it and come back.)</p><button class="pixel-btn" onclick="startCompliments()">OPEN MY COMPLIMENTS 💗</button></div>`;
+}
+function startCompliments(){
+ complimentIndex=0;
+ showComplimentPopup();
+}
+function showComplimentPopup(){
+ const popup=document.getElementById("complimentPopup");
+ document.getElementById("popupWord").textContent=compliments[complimentIndex];
+ document.getElementById("popupCount").textContent=`COMPLIMENT ${complimentIndex+1} / ${compliments.length}`;
+ document.getElementById("popupNext").textContent=complimentIndex===compliments.length-1?"CLAIM ALL FIVE ♡":"NEXT COMPLIMENT ✦";
+ popup.classList.remove("hidden");
+}
+function nextCompliment(){
+ if(complimentIndex<compliments.length-1){
+   complimentIndex++;
+   showComplimentPopup();
+   heartBurst();
+ }else{
+   closeComplimentPopup();
+   finish("compliment","ALL FIVE COMPLIMENTS DELIVERED. Beautiful, gorgeous, cute, hott and eye-catching. Yes, all of the above. ♡");
+ }
+}
+function closeComplimentPopup(){
+ document.getElementById("complimentPopup").classList.add("hidden");
+}
+function heartBurst(){
+ const symbols=["♡","✦","💗","✨"];
+ for(let i=0;i<5;i++){
+   const el=document.createElement("span");
+   el.className="heart-pop";
+   el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+   el.style.left=(35+Math.random()*30)+"vw";
+   el.style.top=(55+Math.random()*20)+"vh";
+   document.body.appendChild(el);
+   setTimeout(()=>el.remove(),1200);
+ }
+}
+function showAchievements(){achievementScreen.classList.remove("hidden");achievementScreen.innerHTML=`<div class="final"><div class="trophy">🏆</div><h2>ANSHIKA.exe<br>LEVEL COMPLETE</h2><div class="pixel" style="font-size:22px;color:var(--mint);margin:14px">100%</div><p>ACHIEVEMENTS UNLOCKED</p></div><div class="achievement"><div class="ach"><b>🏆</b><strong>Professional Heart Stealer</strong><small>Achievement unlocked</small></div><div class="ach"><b>💗</b><strong>Certified Main Character</strong><small>Obviously</small></div><div class="ach"><b>😂</b><strong>Sarcasm Specialist</strong><small>Highly suspected</small></div><div class="ach"><b>🌷</b><strong>Flower Collection: Pending</strong><small>Work in progress. Promise.</small></div></div><p class="subtext" style="text-align:center">A new level has appeared below. It was made just for u.</p>`}
+function renderSecret(){missionView.innerHTML=`<button class="back" onclick="closeMission()">← BACK TO MISSIONS</button><h2 class="mission-title">?? / THE SECRET LEVEL</h2><div class="final"><div class="trophy">🌙</div><h2>YOU FOUND THE SECRET</h2><p>Okay, no more missions for a moment.</p><p>There isn't a prize big enough to describe how special u are. I just wanted to make something that feels a little different, and that gives u a reason to smile while exploring it.</p><p>And this game has no ending. More levels will be added. ♡</p><div style="font-size:25px;margin:20px">♡ ✦ ♡</div><p class="subtext">Thanks for being the main character here, Anshika.</p></div><button class="pixel-btn secondary" onclick="finish('secret','SECRET LEVEL COMPLETE. This little universe will always have a place for u.')">FINISH THE EXPERIENCE ✓</button>`}
+</script></body></html>
